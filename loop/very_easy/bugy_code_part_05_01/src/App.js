@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+// main function 
+
+
+function myBugguCode(arr){
+
+  let newArr = []
+  for(let i=1; i<=arr; i++){
+    newArr.push(i)
+  }
+   return newArr
 }
 
-export default App;
+
+const App=()=>{
+
+  const [inputVale,setInputValue] = useState("")
+  const [output,setOutput] = useState([])
+
+
+
+
+  const handleClick=()=>{
+    
+    setOutput(myBugguCode(Number(inputVale)))
+  }
+
+
+
+
+
+  return(
+    <div>
+           <h1>Buggy Code Part 05</h1>
+           <input type="text" value={inputVale} onChange={(e)=>setInputValue(e.target.value)}/>
+           <button onClick={handleClick}>Click</button>
+           <h2>The output is{JSON.stringify(output)}</h2>
+    </div>
+  )
+}
+
+export default App 
