@@ -16,7 +16,7 @@ const App=()=>{
   const [inputNumofArray,setNumOfArray] = useState("")
   const [output,setOutput] = useState("")
 
-  // how to input in Array type number 
+  // how to input in Array type of numbers 
 
   const handleChaneArrayNum=(e)=>{
       let result = e.target.value.split(",").map((x)=>x.trim())
@@ -43,9 +43,9 @@ const App=()=>{
   return(
     <div>
 
-        <h2>Give me some number of Array</h2>
+        <h2>Give me some numbers of Array</h2>
         <input type="" value={inputNumofArray} onChange={handleChaneArrayNum} />
-        <h2>Give me only charcter type sign</h2>
+        <h2>Give me only charcter type of sign</h2>
         <input type="text" value={inputCharSign} onChange={handleCharSingChaneg} />
          <button onClick={handleClick}>Click</button>
 

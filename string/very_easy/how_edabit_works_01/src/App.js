@@ -8,6 +8,9 @@ const App=()=>{
   const [outPutValue,setOutPutValue] = useState("")
 
 
+  //const [str,setStr]  = useState("")
+
+
 
 
 
@@ -20,7 +23,7 @@ const App=()=>{
   // handle click changes 
 
   const handleClick=()=>{
-        let result = inputValue.toLowerCase()  === "hello edabit.com" ? 'true' : 'false' 
+        let result =  inputValue.toLowerCase()=== "hello edabit.com" ? 'true' : 'flase' 
         setOutPutValue(result)
   }
   return(
